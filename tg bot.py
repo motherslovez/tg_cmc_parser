@@ -21,8 +21,8 @@ def tg_bot():
     def start(message):
         done_text = '<b>Thanks for using CoinMarketCap BOT</b>\n<i>To start: write "/info" or click on the <b>🧙🏻Information</b> button.</i>'
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
-        best5 = types.KeyboardButton('🧙🏻Information')
-        info = types.KeyboardButton('🧙🏻TOP 5')
+        best5 = types.KeyboardButton('🧙🏻TOP 5')
+        info = types.KeyboardButton('🧙🏻Information')
         list = types.KeyboardButton('🧙🏻List')
         markup.add(best5, info, list)
         bot.send_photo(message.chat.id, 'https://s2.coinmarketcap.com/static/cloud/img/news/placeholder1-new.jpg', caption=f'{done_text}', reply_markup=markup, parse_mode='html')
